@@ -49,9 +49,9 @@
         }
 
         .notice-banner {
-            background: linear-gradient(90deg, #1f122e, #121c2e);
-            border-bottom: 1px solid #3b2a54;
-            color: #d1b3ff;
+            background: linear-gradient(90deg, #3b1212, #1f122e);
+            border-bottom: 1px solid #5a2424;
+            color: #ffb3b3;
             font-size: 0.85rem;
             text-align: center;
             padding: 8px;
@@ -66,39 +66,40 @@
             gap: 40px;
         }
 
-        /* 商品画像エリア */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 商品画像エリア（NO IMAGE仕様） */
         .image-box {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background-color: #12141a;
+            border: 1px dashed var(--border-color);
             border-radius: 8px;
-            height: 400px;
+            height: 380px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            overflow: hidden;
-        }
-
-        .image-placeholder {
-            width: 80%;
-            height: 70%;
-            border: 2px dashed #3a4254;
-            border-radius: 6px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--text-dim);
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
         }
 
-        .zoom-hint {
-            position: absolute;
-            bottom: 12px;
-            font-size: 0.75rem;
+        .no-image-title {
+            font-size: 1.2rem;
+            font-weight: bold;
             color: var(--text-dim);
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .no-image-sub {
+            font-size: 0.8rem;
+            color: #526070;
+            line-height: 1.5;
         }
 
         /* 商品情報エリア */
@@ -198,19 +199,20 @@
     </header>
 
     <div class="notice-banner">
-        【重要】現在、思考のバックアップサービスは時空通信障害のため一時停止しております。
+        【緊急】本日18:00以降、一部地域で「静寂」の在庫が枯渇します。【消音保管庫】の早期確保を推奨。
     </div>
-<div class="notice-banner" style="background: linear-gradient(90deg, #3b1212, #1f122e); border-bottom: 1px solid #5a2424; color: #ffb3b3;">
-    【緊急】本日18:00以降、一部地域で「静寂」の在庫が枯渇します。【消音保管庫】の早期確保を推奨。
-</div>
-
+   <div class="notice-banner">
+        【重要】現在、思考のバックアップサービスは時空通信障害のため一時停止しております。
+   </div>
+    
     <div class="container">
-        <!-- 左：商品画像エリア -->
+        <!-- 左：商品画像エリア（NO IMAGE） -->
         <div class="image-box">
-            <div class="image-placeholder">
-                ここに、あなたが手作りした作品の写真やイラスト（imgタグ）が入ります
+            <div class="no-image-title">[ IMAGE PREPARING ]</div>
+            <div class="no-image-sub">
+                個体視認用イメージデータの転送待ち…<br>
+                ※波形同調が完了次第、手作業による外観スキャン画像を掲載します。
             </div>
-            <div class="zoom-hint">🔍 ホバーで質感（サビ・傷・経年変化）を拡大表示</div>
         </div>
 
         <!-- 右：商品スペック＆購入 -->
@@ -219,7 +221,7 @@
             <div class="price-tag">34,800 <span>（税込 / 記憶引き落とし対応）</span></div>
 
             <p style="font-size: 0.9rem; line-height: 1.6; color: #b0bac9;">
-                部屋の片隅に滞留した「理由のない焦り」を物理的に重力補正し、真鍮の質感へ置換するためのポータブル端末。手作業で調整された真鍮パーツが余剰波形を吸収します。
+                部屋の片隅に滞留した「理由のない焦り」を物理的に重力補正し、真鍮の質感へ置換するためのポータブル端末。手作業で調整されたパーツが余剰波形を吸収します。
             </p>
 
             <div class="option-group">
